@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+color:white;
+overflow-x:hidden;
+text-align:center;
+}
+
+.page{
+display:none;
+min-height:100vh;
+padding:30px;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.active{
+display:flex;
+}
+
+/* Cinematic Intro */
+#intro{
+background:black;
+font-size:22px;
+letter-spacing:1px;
+cursor:pointer;
+}
+
+.fade-text{
+animation:fadeIn 4s ease-in-out forwards;
+opacity:0;
+}
+
+@keyframes fadeIn{
+to{opacity:1;}
+}
+
+/* Form */
+input{
+padding:12px;
+margin:10px;
+border-radius:8px;
+border:none;
+width:250px;
+text-align:center;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:30px;
+margin:10px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.primary{
+background:#ff4e50;
+color:white;
+}
+
+.secondary{
+background:#ffffff;
+color:#ff4e50;
+}
+
+/* Love Letter */
+.letter{
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:15px;
+font-family:'Cinzel',serif;
+font-size:18px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(0,0,0,0.3);
+}
+
+/* Slideshow */
+.slideshow{
+max-width:90%;
+position:relative;
+margin:auto;
+}
+
+.slide{
+display:none;
+}
+
+.slide img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+@media(max-width:600px){
+.fade-text{font-size:18px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Intro Page -->
+<div class="page active" id="intro" onclick="showPage('login')">
+<div class="fade-text">
+<h1>Every Love Story Is Beautiful... <br>But Ours Is My Favorite ❤️</h1>
+<br>
+<p>Tap anywhere to begin</p>
+</div>
+</div>
+
+<!-- Login Page -->
+<div class="page" id="login">
+<h2>Enter Your Name 💕</h2>
+<input type="text" id="name" placeholder="Your Name">
+<br>
+<input type="date" id="date">
+<br>
+<button class="primary" onclick="checkLogin()">Unlock ❤️</button>
+<p id="error" style="margin-top:10px;color:yellow;"></p>
+</div>
+
+<!-- Valentine Page -->
+<div class="page" id="valentine">
+<h2>Valentine Week 💖</h2>
+<p>🌹 Rose Day</p>
+<p>💍 Propose Day</p>
+<p>🍫 Chocolate Day</p>
+<p>🧸 Teddy Day</p>
+<p>🤝 Promise Day</p>
+<p>🤗 Hug Day</p>
+<p>💋 Kiss Day</p>
+
+<br>
+<h2>Will You Be My Valentine? 💕</h2>
+
+<button id="yesBtn" class="primary" onclick="yesClicked()">Yes 😍</button>
+<button id="noBtn" class="secondary" onclick="noClicked()">No 🥹</button>
+</div>
+
+<!-- Love Letter Page -->
+<div class="page" id="letterPage">
+<div class="letter">
+<p><strong>My Samma Darloo,</strong></p>
+
+<p>
+हे पत्र लिहिताना माझं मन खूप भावना घेऊन बसलं आहे. काही गोष्टी मनात खूप काळापासून आहेत,
+पण त्या शब्दांत मांडायला धैर्य लागतं. आज ते धैर्य मी तुझ्यासाठी एकत्र केलं आहे—कारण
+तू माझ्या आयुष्यातील सर्वात खास व्यक्ती आहेस.
+</p>
+
+<p>
+तू माझ्या आयुष्यात आलीस आणि सगळं नकळत बदलून गेलं. साधे दिवस अर्थपूर्ण झाले,
+क्षणांना अर्थ मिळाला. तुझ्या हास्यात मला माझं संपूर्ण जग दिसतं,
+आणि तुझ्या शब्दांत मला नेहमीच आपुलकी मिळते.
+</p>
+
+<p>
+Sammu, तू फक्त माझं प्रेम नाहीस—तू माझी जिवलग मैत्रीण आहेस,
+माझा विश्वास आहेस, माझा आधार आहेस. माझ्या प्रत्येक यशामागे तुझं पाठबळ आहे
+आणि माझ्या अडचणींमध्ये तुझी साथ आहे.
+</p>
+
+<p>
+मी तुला आयुष्यभर एकच गोष्ट देण्याचं वचन देतो—
+<strong>तुला मनापासून समजून घेणं, तुझा आदर करणं,
+आणि प्रत्येक परिस्थितीत तुझ्या सोबत खंबीरपणे उभं राहणं.</strong>
+</p>
+
+<p>
+आणि आता, या सगळ्या भावना शब्दांत मांडल्यानंतर,
+माझ्या मनातली सर्वात महत्त्वाची गोष्ट तुला विचारतोय…
+</p>
+
+<p>
+<strong>
+Sammi, तू माझ्या आयुष्याची कायमची साथीदार होशील का?<br>
+माझ्यासोबत लग्न करून, हे नातं आयुष्यभरासाठी स्वीकारशील का?
+</strong>
+</p>
+
+<p class="signature">
+सदैव तुझाच,<br>
+<strong>Viki</strong> 💖
+</p>
+
+
+</div>
+
+<button id="nextBtn" class="primary" style="display:none;margin-top:20px;" onclick="showPage('gallery')">
+Ready for more? ❤️
+</button>
+</div>
+
+<!-- Gallery Page -->
+<div class="page" id="gallery">
+<h2>Our Beautiful Memories 📸</h2>
+<div class="slideshow">
+<div class="slide"><img src="t1.jpeg"></div>
+<div class="slide"><img src="t2.jpg"></div>
+<div class="slide"><img src="t3.jpeg"></div>
+</div>
+<br>
+<h3>Every moment with you is a blessing.  
+I love you more than words can ever express ❤️</h3>
+</div>
+
+<script>
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+function checkLogin(){
+let name=document.getElementById("name").value.toLowerCase();
+let date=document.getElementById("date").value;
+
+let validNames=["samiksha","mikku","mikkudi"];
+let correctDate1="2023-08-12";
+
+if(validNames.includes(name) && date===correctDate1){
+showPage("valentine");
+}else{
+document.getElementById("error").innerText="अरे यार ! ते काय Enter कर म्हणत आहे नीट बघ! हे पण काजू खाऊन विसरली आहेस का?";
+}
+}
+
+function noClicked(){
+let yes=document.getElementById("yesBtn");
+let no=document.getElementById("noBtn");
+yes.style.fontSize=(parseInt(window.getComputedStyle(yes).fontSize)+4)+"px";
+no.style.transform="scale(0.9)";
+}
+
+function yesClicked(){
+showPage("letterPage");
+setTimeout(()=>{
+document.getElementById("nextBtn").style.display="inline-block";
+},12000);
+}
+
+let slideIndex=0;
+function showSlides(){
+let slides=document.querySelectorAll(".slide");
+slides.forEach(s=>s.style.display="none");
+slideIndex++;
+if(slideIndex>slides.length){slideIndex=1;}
+slides[slideIndex-1].style.display="block";
+setTimeout(showSlides,3000);
+}
+showSlides();
+</script>
+
+</body>
+</html>
