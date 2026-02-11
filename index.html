@@ -93,21 +93,33 @@ backdrop-filter:blur(10px);
 box-shadow:0 0 30px rgba(0,0,0,0.3);
 }
 
-/* Slideshow */
+/* Gallery page */
+#gallery{
+    text-align:center;
+}
+
+/* Slideshow container */
 .slideshow{
-max-width:90%;
-position:relative;
-margin:auto;
+    width:100%;
+    max-width:360px;      /* 🔥 controls overall size */
+    margin:20px auto;
+    overflow:hidden;
+    position:relative;
 }
 
+/* Each slide */
 .slide{
-display:none;
+    width:100%;
 }
 
+/* Images */
 .slide img{
-width:100%;
-border-radius:20px;
-box-shadow:0 0 25px rgba(0,0,0,0.4);
+    width:100%;
+    height:auto;          /* keeps mobile ratio */
+    max-height:420px;     /* 🔥 prevents huge height */
+    object-fit:contain;   /* shows full image nicely */
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
 @media(max-width:600px){
@@ -276,4 +288,5 @@ showSlides();
 
 </body>
 </html>
+
 
